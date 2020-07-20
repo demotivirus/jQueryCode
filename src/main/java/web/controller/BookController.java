@@ -29,4 +29,9 @@ public class BookController {
         ServiceResponse<Book> response = new ServiceResponse<Book>("success", book);
         return new ResponseEntity<Object>(response, HttpStatus.OK);
     }
+
+    @GetMapping("/book_home")
+    public String bookHome(){
+        return "ajax/book_home";
+    }
 }
